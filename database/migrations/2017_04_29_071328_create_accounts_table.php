@@ -14,7 +14,9 @@ class CreateAccountsTable extends Migration
     public function up()
     {
         Schema::create('accounts', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id')->primary();
+            $table->bigInteger('customer_id')->unsigned()->foreign()->->references('id')->on('customers');
+            $table->integer('type');
             $table->timestamps();
         });
     }
