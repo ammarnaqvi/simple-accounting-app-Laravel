@@ -14,10 +14,15 @@ class CreateAccountsTable extends Migration
     public function up()
     {
         Schema::create('accounts', function (Blueprint $table) {
-            $table->increments('id')->primary();
-            $table->bigInteger('customer_id')->unsigned()->foreign()->->references('id')->on('customers');
+            $table->increments('id');
+            $table->bigInteger('customer_id')->unsigned();
             $table->integer('type');
+            $table->integer('balance');
             $table->timestamps();
+        });
+
+        Schema::table('accounts', function(Blueprint $table){
+            $table->foreign('customer_id')->references('id')->on('customers');
         });
     }
 
