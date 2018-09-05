@@ -48,26 +48,22 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
-                        <!-- Authentication Links -->
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                    Ammar <span class="caret"></span>
-                                </a>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                Menu <span class="caret"></span>
+                            </a>
 
-                                <ul class="dropdown-menu" role="menu">
-                                    <li>
-                                        <a href=""
-                                            onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                            Logout
-                                        </a>
-
-                                        <!-- <form id="logout-form" action="" method="POST" style="display: none;">
-                                            {{ csrf_field() }}
-                                        </form> -->
-                                    </li>
-                                </ul>
-                            </li>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>
+                                    <a href="{{ route('home') }}">Home</a>
+                                    <a href="{{ route('new_account_page') }}">Add new account</a>
+                                    <a href="{{ route('edit_account_page') }}">Edit existing account</a>
+                                    <a href="{{ route('debit_account_page') }}">Debit an account</a>
+                                    <a href="{{ route('credit_account_page') }}">Credit an account</a>
+                                    <a href="{{ route('view_balance_page') }}">View account balance</a>
+                                </li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>

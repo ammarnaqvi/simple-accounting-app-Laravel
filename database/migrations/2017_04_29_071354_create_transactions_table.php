@@ -14,14 +14,16 @@ class CreateTransactionsTable extends Migration
     public function up()
     {
         Schema::create('transactions', function (Blueprint $table) {
+
+            $table->engine = 'InnoDB';
+
             $table->increments('id');
-            $table->bigInteger('account_id')->unsigned();
+            $table->integer('account_id')->unsigned();
             $table->integer('type');
             $table->timestamps();
-        });
-
-        Schema::table('transactions', function(Blueprint $table){
+ 
             $table->foreign('account_id')->references('id')->on('accounts');
+
         });
     }
 
