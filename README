@@ -1,16 +1,16 @@
 
-ASSUMPTIONS
+# ASSUMPTIONS
 
 	Since no technological requirements were specified, I was free to use any stack.
 	In the ERD, Address being a number instead of a string was a typo.
 	Customer cannot exploit the monthly increment to a savings account by depositing money right before the increment and withdrawing it right after the increment and repeat.
 
-TECH STACK
+# TECH STACK
 
 	This assignment is done with LAMP stack using PHP Laravel framework. Editor used was Sublime Text 3.
 
 
-GETTING STARTED
+# GETTING STARTED
 
 	Have linux installed.  		//L
 	Have apache2 installed.		//A
@@ -39,7 +39,7 @@ GETTING STARTED
 		in my case
 		* * * * * php /home/Ammar/Desktop/Arbisoft/artisan schedule:run >> /dev/null 2>&1
 
-CODE
+# CODE
 
 	Migrations located in Arbisoft/database/migrations/
 
